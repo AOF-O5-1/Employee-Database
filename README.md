@@ -122,3 +122,6 @@ If you have any questions, please reach out:
 
 - GitHub: [AOF-O5-1](https://github.com/AOF-O5-1)
 - Email: [marcusfajemisin@example.com](mailto:marcusfajemisin@example.com)
+
+## Video Tutorial
+Video: https://drive.google.com/file/d/1FeK0dPNi-1WE0Vdf6quT9MeN3IK-dLrZ/view
