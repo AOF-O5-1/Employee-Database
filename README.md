@@ -26,7 +26,7 @@ This is a command-line application for managing an employee database. The applic
 2. Navigate to the project directory:
 
    ```bash
-   cd employee-database
+   cd client
    ```
 
 3. Install the required dependencies:
