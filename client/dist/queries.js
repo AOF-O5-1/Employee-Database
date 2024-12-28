@@ -58,23 +58,9 @@ function deleteRole(title) {
 }
 function getEmployees() {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const { rows } = yield connection_js_1.default.query('SELECT * FROM employee');
-            console.log('Fetched employees:', rows);
-            return rows.map((row) => ({
-                id: row.id,
-                firstName: row.firstName,
-                lastName: row.lastName,
-                roleId: row.roleId,
-                departmentId: row.departmentId,
-                salary: row.salary,
-                managerId: row.managerId,
-            }));
-        }
-        catch (err) {
-            console.log('Error fetching employees:', err);
-            return [];
-        }
+        const { rows } = yield connection_js_1.default.query('SELECT * FROM employee');
+        console.log('Fetched employees:', rows);
+        return rows;
     });
 }
 function addEmployee(firstName, lastName, roleId, salary, managerId) {

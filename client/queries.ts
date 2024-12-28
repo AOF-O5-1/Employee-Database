@@ -53,22 +53,10 @@ interface Employee{
     
 }
 export async function getEmployees(): Promise<Employee[]> {
-    try{
     const { rows } = await client.query<Employee>('SELECT * FROM employee');
     console.log('Fetched employees:', rows);
-    return rows.map((row) => ({
-        id: row.id,
-        firstName: row.firstName,
-        lastName: row.lastName,
-        roleId: row.roleId,
-        departmentId: row.departmentId,
-        salary: row.salary,
-        managerId: row.managerId,
-    })); 
-}catch (err) {
-    console.log('Error fetching employees:', err);
-    return []; 
-}}
+    return rows;
+}
 
 export async function addEmployee(firstName: string, lastName: string, roleId: number, salary: number, managerId: number): Promise<void>{
     await client.query('INSERT INTO employee (firstname, lastname, roleid, salary, managerid) VALUES ($1, $2, $3, $4, $5)', [firstName, lastName, roleId, salary, managerId]);
